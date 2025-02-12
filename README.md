@@ -72,7 +72,7 @@
 
 1. Download the install script:
 ```console
-wget [url]
+wget https://raw.githubusercontent.com/DoubleDotStudios/niri-dotfiles/refs/heads/main/install.sh
 ```
 
 2. Make the script executable:
