@@ -67,8 +67,7 @@
 
 > [!IMPORTANT]
 > To use the install script the following should be installed:  
-> Wget, Git, Niri, Fuzzel, Neovim, Dunst, Fuzzel, Fastfetch, Yazi, Kitty, mpv,  
-> Hyprlock, Swayidle and Swaybg
+> Wget, Git, Niri, Fuzzel, Neovim, Dunst, Fuzzel, Fastfetch, Yazi, Kitty, mpv, Hyprlock, Swayidle and Swaybg
 
 1. Download the install script:
 ```console
