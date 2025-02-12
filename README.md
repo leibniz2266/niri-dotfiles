@@ -96,16 +96,16 @@ cd ./niri-dotfiles
 
 2. Move all directories except `wallpapers` to `~/.config`:
 ```console
-mv ./niri ~/.config
-mv ./nvim ~/.config
-mv ./dunst ~/.config
-mv ./kitty ~/.config
-mv ./waybar ~/.config
-mv ./fastfetch ~/.config
-mv ./yazi ~/.config/yazi
-mv ./fuzzel ~/.config/fuzzel
-mv ./mpv ~/.config/mpv
-mv ./hypr ~/.config/hypr
+mv ./niri ~/.config/
+mv ./nvim ~/.config/
+mv ./dunst ~/.config/
+mv ./kitty ~/.config/
+mv ./waybar ~/.config/
+mv ./fastfetch ~/.config/
+mv ./yazi ~/.config/
+mv ./fuzzel ~/.config/
+mv ./mpv ~/.config/
+mv ./hypr ~/.config/
 ```
 
 3. Move `wallpapers` to `~/Pictures/Wallpapers/`:
