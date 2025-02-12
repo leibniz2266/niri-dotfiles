@@ -13,24 +13,24 @@
 
 ## Preview
 
-![Empty](<./assets/Blank Workspace.png>)
+![Empty](<./assets/Blank.png>)
 *Blank Workspace*  
 
 
-![Empty](<./assets/Two Windows Open.png>)
-*SolarVim and Zen*  
+![Empty](<./assets/Fetch.png>)
+*Fastefetch, Kitty and Firefox*  
 
 
-![Empty](<./assets/System Fetch.png>)
-*Fastfetch*  
+![Empty](<./assets/Solarvim.png>)
+*Neovim Config*  
 
 
-![Empty](<./assets/Rofi Launcher.png>)
-*Rofi launcher*  
+![Empty](<./assets/Floating.png>)
+*Yazi and mpv*  
 
 
-![Empty](<./assets/Rofi Powermenu.png>)
-*Rofi power menu*  
+![Empty](<./assets/Launcher.png>)
+*Waybar app launcher*  
 
 
 ---
@@ -118,3 +118,5 @@ mv ./wallpapers ~/Pictures/Wallpapers
 
 ### Credit
 
+Catppuccin: [mpv](https://github.com/catppuccin/mpv), [Yazi](https://github.com/catppuccin/yazi), [Hyprlock](https://github.com/catppuccin/hyprlock), [Fuzzel](https://github.com/catppuccin/fuzzel)
+Sansroot: [Waybar](https://github.com/sansroot/hypr-dots/tree/mauve/waybar)
