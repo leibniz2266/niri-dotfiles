@@ -118,5 +118,5 @@ mv ./wallpapers ~/Pictures/Wallpapers
 
 ### Credit
 
-Catppuccin: [mpv](https://github.com/catppuccin/mpv), [Yazi](https://github.com/catppuccin/yazi), [Hyprlock](https://github.com/catppuccin/hyprlock), [Fuzzel](https://github.com/catppuccin/fuzzel)
+Catppuccin: [mpv](https://github.com/catppuccin/mpv), [Yazi](https://github.com/catppuccin/yazi), [Hyprlock](https://github.com/catppuccin/hyprlock), [Fuzzel](https://github.com/catppuccin/fuzzel)  
 Sansroot: [Waybar](https://github.com/sansroot/hypr-dots/tree/mauve/waybar)
