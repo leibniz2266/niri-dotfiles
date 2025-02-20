@@ -1,14 +1,11 @@
-spawn-at-startup "systemctl" "--user" "start" "plasma-polkit-agent"
-spawn-at-startup "systemctl" "--user" "start" "xdg-desktop-portal-wlr"
-spawn-at-startup "systemctl" "--user" "start" "xdg-desktop-portal-gtk"
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 spawn-at-startup "/usr/lib/xdg-desktop-portal-kde"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "waybar"
-spawn-at-startup "swaybg" "-i" "/home/dds/Pictures/Wallpapers/Grey Spaceman.png"
+spawn-at-startup "waypaper" "--restore"
 spawn-at-startup "dunst"
 spawn-at-startup "swayidle" "-w"
-spawn-at-startup "~/Desktop/.Scripts/low_battery"
+spawn-at-startup "~/Desktop/.Scripts/low_bat_run"
 
 workspace "1"
 workspace "2"
@@ -35,7 +32,7 @@ input {
     keyboard {
         xkb {
             layout "gb,us"
-            options "compose:ralt,ctrl:nocaps"
+            options "ctrl:nocaps"
         }
 
         repeat-delay 400
@@ -87,7 +84,7 @@ layout {
         proportion 1.0
     }
 
-    default-column-width { proportion 0.75; }
+    default-column-width { proportion 0.99; }
 
     focus-ring {
         off
@@ -114,9 +111,23 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"kitty$"# title="^tty-clock$"
+
+    open-floating true
+    default-column-width { proportion 0.3; }
+    default-window-height { proportion 0.3; }
+    default-floating-position x=7 y=7 relative-to="top-right"
+    open-focused false
+    opacity 0.97
+}
+
+window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     match app-id=r#"firefox$"# title="^Library$"
     match app-id=r#"mpv$"#
+    match app-id=r#"libresprite$"#
+    match app-id=r#"waypaper$"#
+    match app-id=r#"Audacity$"#
 
     open-floating true
     opacity 1.0
@@ -125,6 +136,7 @@ window-rule {
 window-rule {
     match app-id=r#"firefox$"#
     match app-id=r#"chromium$"#
+    match app-id=r#"vivaldi-stable$"#
     match app-id=r#"virt-manager$"#
     match app-id=r#"^com\.obsproject\.Studio$"#
 
@@ -141,7 +153,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return { spawn "kitty"; }
-    Mod+A { spawn "fuzzel"; }
+    Mod+A { spawn "rofi" "-show" "drun" "-config" "~/.config/rofi/sway.rasi"; }
     Mod+F {spawn "firefox";}
     Mod+D {spawn "discord" "--enable-features=UseOzonePlatform" "--ozone-platform=wayland";}
     Mod+E {spawn "kitty" "-e" "yazi";}
@@ -153,6 +165,9 @@ binds {
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
     XF86MonBrightnessUp cooldown-ms=50 allow-when-locked=true { spawn "brightnessctl" "s" "5%+"; }
     XF86MonBrightnessDown cooldown-ms=50 allow-when-locked=true { spawn "brightnessctl" "s" "5%-"; }
+
+    Shift+XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01+"; }
+    Shift+XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01-"; }
 
     Mod+Q { close-window; }
 
@@ -234,8 +249,10 @@ binds {
     Ctrl+Print { screenshot-window; }
 
     Mod+Shift+E { quit; }
-    Ctrl+Alt+Delete { quit skip-confirmation=true; }
+    Ctrl+Alt+Delete { spawn "rofi" "-show" "menu" "-modi" "'menu:~/.local/share/rofi/scripts/rofi-power-menu-niri --choices=logout/suspend/reboot/shutdown'" "-config" "~/.config/rofi/power.rasi"; }
 
     Super+Alt+L { spawn "hyprlock"; }
     Mod+Shift+P { power-off-monitors; }
+
+    Mod+Shift+C { center-window; }
 }

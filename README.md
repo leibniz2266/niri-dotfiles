@@ -94,7 +94,7 @@ git clone https://github.com/DoubleDotStudios/niri-dotfiles
 cd ./niri-dotfiles
 ```
 
-2. Move all directories except `wallpapers` to `~/.config`:
+2. Move all directories except `wallpapers` and `rofi/local` to `~/.config`:
 ```console
 mv ./niri ~/.config/
 mv ./nvim ~/.config/
@@ -108,7 +108,12 @@ mv ./mpv ~/.config/
 mv ./hypr ~/.config/
 ```
 
-3. Move `wallpapers` to `~/Pictures/Wallpapers/`:
+3. Move `rofi/local` to `~/.local/share/rofi`
+```
+mv ./rofi/local ~/.local/share/rofi
+```
+
+3. Move `wallpapers` to `~/Pictures/Wallpapers`:
 ```console
 mv ./wallpapers ~/Pictures/Wallpapers
 ```
@@ -118,4 +123,5 @@ mv ./wallpapers ~/Pictures/Wallpapers
 ### Credit
 
 Catppuccin: [mpv](https://github.com/catppuccin/mpv), [Yazi](https://github.com/catppuccin/yazi), [Hyprlock](https://github.com/catppuccin/hyprlock), [Fuzzel](https://github.com/catppuccin/fuzzel)  
-Sansroot: [Waybar](https://github.com/sansroot/hypr-dots/tree/mauve/waybar)
+Sansroot: [Waybar](https://github.com/sansroot/hypr-dots/tree/mauve/waybar)  
+Lactua: [Rofi](https://github.com/lactua/dotfiles/tree/master/dots/rofi)
