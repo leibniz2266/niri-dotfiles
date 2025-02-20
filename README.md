@@ -42,6 +42,7 @@
 - waybar
 - dunst
 - hyprlock
+- rofi
 
 - neovim
 - kitty
