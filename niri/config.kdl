@@ -5,7 +5,6 @@ spawn-at-startup "waybar"
 spawn-at-startup "waypaper" "--restore"
 spawn-at-startup "dunst"
 spawn-at-startup "swayidle" "-w"
-spawn-at-startup "~/Desktop/.Scripts/low_bat_run"
 
 workspace "1"
 workspace "2"
