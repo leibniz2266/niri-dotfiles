@@ -35,7 +35,7 @@ NECESSARY_PKGS=(
 )
 
 yay -S --noconfirm --needed "${NECESSARY_PKGS[@]}"
-
+sudo systemctl enable sddm
 
 # Please, feel free to edit these to your liking
 # Of course, they're tailored to what I want on my system
@@ -120,4 +120,4 @@ mv ./rofi/local ~/.local/share/rofi
 echo "Moving wallpapers to ~/Pictures/Wallpapers..."
 mv ./wallpapers ~/Pictures/Wallpapers
 
-echo "Done!"
+echo "Done! Reboot and enjoy!"
