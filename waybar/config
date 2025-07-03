@@ -32,10 +32,10 @@
         "max-length": 50
     },
     "clock": {
-        "timezone": "Pacific/Auckland",
+        "timezone": "America/Los_Angeles",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "  {:%d/%m/%Y}",
-        "format": "  {:%H:%M}"
+        "format-alt": "  {:%m/%d/%Y}",
+        "format": "  {:%I:%M %p}"
     },
     "backlight": {
         "device": "amdgpu_bl1",

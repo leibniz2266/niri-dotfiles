@@ -36,51 +36,59 @@
 ---
 
 ## Dependencies
-- niri
 
+The basics to get the rice started are below:
+
+- niri
 - fuzzel
 - waybar
 - dunst
 - hyprlock
 - rofi
-
-- neovim
 - kitty
 - yazi
-
 - CaskaydiaCove Nerd Font / CascadiaCode
 - Tela Circle Dracula Icons
+- swayidle
+- swaybg
+- hyprlock
+
+The setup script `install.sh` actually takes care of all of these, so don't worry too much. Of course, read through the install script to see what else will be installed. 
 
 ---
 
 ## Optional Extras
-> lacking some require modification of the niri config file, indicated by *
+> If you're missing those marked with \*stars\*, you may have to adjust/modify the main Niri config file (mostly just keybinds)
 
-- \* firefox
+- \* librewolf
 - \* brightnessctl
-- \* discord
 
 - fastfetch
+
+These are included by default in the setup script, so you'll be fine unless you choose to remove them - just don't forget the Niri config if you do.
 
 ---
 
 ## Install Script
 
 > [!IMPORTANT]
-> To use the install script the following should be installed:  
-> Wget, Git, Niri, Fuzzel, Neovim, Dunst, Fuzzel, Fastfetch, Yazi, Kitty, mpv, Hyprlock, Swayidle and Swaybg
+> To use the install script, you need an Arch (or a derivative) and `git` installed. It's been written with a minimal installation in mind, so bear in mind that you may have weird conflicts if you're not using a new install.
 
-1. Download the install script:
+1. Download the repo:
 ```console
-wget https://raw.githubusercontent.com/DoubleDotStudios/niri-dotfiles/refs/heads/main/install.sh
+git clone https://github.com/Leibniz2266/niri-dotfiles && cd ./niri-dotfiles
 ```
 
-2. Make the script executable:
+2. *Please* read the setup script, specifically the lists of packages to be installed. They were all tailored to me, so I recommend you pick and choose what you want to install from the non-necessary package lists. 
+
+    **Otherwise, expect a lot of bloat**
+
+3. Make the script executable:
 ```console
 chmod +x install.sh
 ```
 
-3. Run the installer:
+4. Run the installer:
 ```console
 ./install.sh
 ```
@@ -91,14 +99,13 @@ chmod +x install.sh
 
 1. Clone the repo:
 ```console
-git clone https://github.com/DoubleDotStudios/niri-dotfiles
+git clone https://github.com/Leibniz2266/niri-dotfiles
 cd ./niri-dotfiles
 ```
 
 2. Move all directories except `wallpapers` and `rofi/local` to `~/.config`:
 ```console
 mv ./niri ~/.config/
-mv ./nvim ~/.config/
 mv ./dunst ~/.config/
 mv ./kitty ~/.config/
 mv ./waybar ~/.config/

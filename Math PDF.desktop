@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[en_US]=Execute the script with the file dropped
+Comment=Execute the script with the file dropped
+Encoding=UTF-8
+Exec=bash '~/pandoc2.sh' "%u"
+GenericName[en_US]=
+GenericName=
+Icon=utilities-terminal
+MimeType=
+Name[en_US]=Math PDF
+Name=Math PDF
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

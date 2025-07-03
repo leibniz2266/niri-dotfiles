@@ -43,6 +43,7 @@ input {
         tap
         accel-profile "flat"
         scroll-method "two-finger"
+        natural-scroll
     }
 
     mouse {
@@ -135,7 +136,7 @@ window-rule {
 window-rule {
     match app-id=r#"firefox$"#
     match app-id=r#"chromium$"#
-    match app-id=r#"vivaldi-stable$"#
+    match app-id=r#"librewolf$"#
     match app-id=r#"virt-manager$"#
     match app-id=r#"^com\.obsproject\.Studio$"#
 
@@ -152,10 +153,13 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return { spawn "kitty"; }
+    Mod+T { spawn "kitty"; }
     Mod+A { spawn "rofi" "-show" "drun" "-config" "~/.config/rofi/sway.rasi"; }
-    Mod+F {spawn "firefox";}
-    Mod+D {spawn "discord" "--enable-features=UseOzonePlatform" "--ozone-platform=wayland";}
+    Mod+W {spawn "librewolf";}
+    Mod+Shift+W {spawn "librewolf" "--private-window";}
+    #Mod+D {spawn "discord" "--enable-features=UseOzonePlatform" "--ozone-platform=wayland";}
     Mod+E {spawn "kitty" "-e" "yazi";}
+    Mod+Shift+E {spawn "thunar";}
     Mod+B {spawn "~/.config/waybar/launch.sh"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
@@ -229,7 +233,7 @@ binds {
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
-    Mod+M { maximize-column; }
+    Mod+D { maximize-column; }
     Mod+C { center-column; }
 
     Mod+Minus { set-column-width "-5%"; }
@@ -238,20 +242,20 @@ binds {
     Mod+Shift+Minus { set-window-height "-5%"; }
     Mod+Shift+Equal { set-window-height "+5%"; }
 
-    Mod+W       { toggle-window-floating; }
-    Mod+Shift+W { switch-focus-between-floating-and-tiling; }
+    Mod+F       { toggle-window-floating; }
+    Mod+Shift+F { switch-focus-between-floating-and-tiling; }
 
     Mod+K { switch-layout "next"; }
 
-    Print { screenshot-screen; }
+    Mod+Shift+S { screenshot-screen; }
     Alt+Print { screenshot; }
     Ctrl+Print { screenshot-window; }
 
-    Mod+Shift+E { quit; }
+    Mod+Shift+L { quit; }
     Ctrl+Alt+Delete { spawn "rofi" "-show" "menu" "-modi" "'menu:~/.local/share/rofi/scripts/rofi-power-menu-niri --choices=logout/suspend/reboot/shutdown'" "-config" "~/.config/rofi/power.rasi"; }
 
-    Super+Alt+L { spawn "hyprlock"; }
-    Mod+Shift+P { power-off-monitors; }
-
+    Super+L { spawn "hyprlock"; }
+    #Mod+Shift+P { power-off-monitors; }
+    
     Mod+Shift+C { center-window; }
 }

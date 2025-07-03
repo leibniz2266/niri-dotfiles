@@ -1,0 +1,22 @@
+geometry: margin=1.3in
+subtitle: "Written by Harry"
+
+
+header-includes:
+- |
+  ```{=latex}
+  \usepackage{tcolorbox}
+  \newtcolorbox{def-box}{colback=cyan!5!white,arc=0pt,outer arc=0pt,colframe=cyan!60!black}
+  \newtcolorbox{theorem-box}{colback=violet!5!white,arc=0pt,outer arc=0pt,colframe=violet!80!black}
+  \newtcolorbox{idea-box}{colback=green!5!white,arc=0pt,outer arc=0pt,colframe=green!75!black}
+  \newtcolorbox{proof-box}{colback=blue!5!white,arc=0pt,outer arc=0pt,colframe=blue!75!black}
+  \newtcolorbox{red-box}{colback=red!5!white,arc=0pt,outer arc=0pt,colframe=red!75!black}
+
+  ```
+pandoc-latex-environment:
+  tcolorbox: [box]
+  def-box: [def]
+  theorem-box: [theorem]
+  idea-box: [idea]
+  proof-box: [proof]
+  red-box: [red]
