@@ -66,7 +66,7 @@ yay -S --noconfirm --needed "${EMOJI_PKGS[@]}"
 
 
 
-
+####################################
 ####################################
 
 # This is for my fellow math nerds. Feel free to remove this whole section
@@ -91,14 +91,21 @@ cp ./"Math PDF.desktop" ~/Desktop/"Math PDF.Desktop"
 cp ./pandoc2.sh ~/pandoc2.sh
 
 ####################################
+####################################
+
 
 # Make the classic /home directory folders
+cd
 mkdir -p Desktop Documents Downloads Music Pictures Videos
 
 # Pre-make some of these folders, for convenience. The script will exit if they're not there
 cd ~/.config
 mkdir -p niri dunst kitty waybar fastfetch yazi fuzzel mpv hypr rofi
 
+
+
+# Only thing left is to copy the actual dots 
+# from the repo clone to ~/.config
 
 cd ~/niri-dotfiles
 
@@ -120,4 +127,4 @@ mv ./rofi/local ~/.local/share/rofi
 echo "Moving wallpapers to ~/Pictures/Wallpapers..."
 mv ./wallpapers ~/Pictures/Wallpapers
 
-echo "Done! Reboot and enjoy!"
+echo "Done!"
