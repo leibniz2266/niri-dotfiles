@@ -1,0 +1,51 @@
+[global]
+# ===== Global Appearance =====
+frame_width = 2
+corner_radius = 10
+offset = "30x50"
+origin = "top-right"
+alignment = "left"
+font = "JetBrains Mono 10"
+icon_position = "left"
+max_icon_size = 80
+gap_size = 10
+separator_color = "auto"
+sort = "yes"
+idle_threshold = 120
+ignore_newline = "no"
+line_height = 3
+format = "<b>%s</b>\n%b"
+show_indicators = "no"
+
+# ===== Color Scheme =====
+background = "#1e1e2ef7"
+foreground = "#cdd6f4"
+frame_color = "#cba6f7"
+timeout = 8
+
+# ===== Progress Bar =====
+progress_bar = true
+progress_bar_height = 5
+progress_bar_min_width = 250
+progress_bar_max_width = 300
+progress_bar_corner_radius = 2
+progress_bar_background = "#585b70"
+progress_bar_foreground = "#cba6f7"
+
+[urgency_low]
+background = "#1e1e2ef7"
+foreground = "#cdd6f4"
+frame_color = "#cba6f7"
+timeout = 4
+
+[urgency_normal]
+background = "#1e1e2ef7"
+foreground = "#cdd6f4"
+frame_color = "#cba6f7"
+timeout = 6
+
+[urgency_critical]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+frame_color = "#a6e3a1"
+timeout = 0
