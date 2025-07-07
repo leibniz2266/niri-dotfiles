@@ -32,7 +32,7 @@ NECESSARY_PKGS=(
     kitty yazi thunar ttf-cascadia-code-nerd nano
     brightnessctl fastfetch rofi wget mpv swayidle
     fish tela-circle-icon-theme-dracula swaybg firefox
-    waypaper catppuccin-gtk-theme-mocha nm-connection-editor
+    waypaper catppuccin-gtk-theme-mocha network-manager-applet
 )
 
 yay -S --noconfirm --needed "${NECESSARY_PKGS[@]}"
