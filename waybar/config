@@ -5,7 +5,7 @@
     // Choose the order of the modules
     "modules-left": ["custom/launcher", "niri/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "backlight", "battery", "niri/language", "tray", "custom/lock"],
+    "modules-right": ["pulseaudio", "custom/nm", "network", "backlight", "battery", "niri/language", "tray", "custom/lock"],
     "niri/workspaces": {
          "format": "{icon}",
          "format-icons": {
@@ -75,6 +75,14 @@
         "tooltip": false,
         "on-click": "wlogout &",
         "format": "⏻ "
+    },
+    "custom/nm": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "Open Network Settings",
+        "on-click": "nm-connection-editor",
+        "on-click-right": "pkill nm-connection-editor",
+        "return-type": "json"
     },
     "niri/language": {
         "format": "  {short}",

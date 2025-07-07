@@ -160,8 +160,8 @@ binds {
     Mod+W {spawn "librewolf";}
     Mod+Shift+W {spawn "librewolf" "--private-window";}
     //Mod+D {spawn "discord" "--enable-features=UseOzonePlatform" "--ozone-platform=wayland";}
-    Mod+E {spawn "kitty" "-e" "yazi";}
-    Mod+Shift+E {spawn "thunar";}
+    Mod+E {spawn "thunar";}
+    Mod+Shift+E {spawn "kitty" "-e" "yazi";}
     Mod+B {spawn "~/.config/waybar/launch.sh"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }

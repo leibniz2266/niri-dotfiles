@@ -32,7 +32,7 @@ NECESSARY_PKGS=(
     kitty yazi thunar ttf-cascadia-code-nerd nano
     brightnessctl fastfetch rofi wget mpv swayidle
     fish tela-circle-icon-theme-dracula swaybg firefox
-    waypaper catppuccin-gtk-theme-mocha
+    waypaper catppuccin-gtk-theme-mocha nm-connection-editor
 )
 
 yay -S --noconfirm --needed "${NECESSARY_PKGS[@]}"
@@ -101,13 +101,15 @@ mkdir -p Desktop Documents Downloads Music Pictures Videos
 
 # Pre-make some of these folders, for convenience. The script will exit if they're not there
 cd ~/.config
-mkdir -p niri dunst kitty waybar fastfetch yazi fuzzel mpv hypr rofi
+mkdir -p niri dunst nvim kitty waybar fastfetch yazi fuzzel mpv hypr rofi waypaper gtk-3.0 gtk-4.0
 
 
 # Sets the timezone to Los Angeles time (West Coast, baby!)
 # Change this to whatever is relevant to you. Removing this defaults to UTC
 sudo timedatectl set-timezone America/Los_Angeles
 
+# Adding FastFetch to Fish
+echo "fastfetch" >> ~/.config/fish/config.fish
 
 
 # Only thing left is to copy the actual dots 
@@ -118,6 +120,7 @@ cd ~/niri-dotfiles
 echo "Moving the config files to ~/.config..."
 mv ./niri ~/.config/
 mv ./dunst ~/.config/
+mv ./nvim ~/.config/
 mv ./kitty ~/.config/
 mv ./waybar ~/.config/
 mv ./fastfetch ~/.config/
@@ -125,10 +128,15 @@ mv ./yazi ~/.config/
 mv ./fuzzel ~/.config/
 mv ./mpv ~/.config/
 mv ./hypr ~/.config/
+mv ./waypaper ~/.config/
 mv ./rofi/config ~/.config/rofi
 
 echo "Putting rofi script in ~/.local/share/rofi..."
 mv ./rofi/local ~/.local/share/rofi
+
+echo "Setting up GTK settings..."
+cp ./gtkSettings/settings.ini ~/.config/gtk-3.0/settings.ini
+mv ./gtkSettings/settings.ini ~/.config/gtk-4.0/settings.ini
 
 echo "Moving wallpapers to ~/Pictures/Wallpapers..."
 mv ./wallpapers ~/Pictures/Wallpapers
