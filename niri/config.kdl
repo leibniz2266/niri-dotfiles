@@ -5,6 +5,8 @@ spawn-at-startup "waybar"
 spawn-at-startup "waypaper" "--restore"
 spawn-at-startup "dunst"
 spawn-at-startup "swayidle" "-w"
+spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "gtk-theme" "'catppuccin-mocha-lavender-standard+default'"
+spawn-at-startup "gsettings" "set" "org.gnome.desktop.wm.preferences" "theme" "'catppuccin-mocha-lavender-standard+default'"
 
 workspace "1"
 workspace "2"
@@ -157,7 +159,7 @@ binds {
     Mod+A { spawn "rofi" "-show" "drun" "-config" "~/.config/rofi/sway.rasi"; }
     Mod+W {spawn "librewolf";}
     Mod+Shift+W {spawn "librewolf" "--private-window";}
-    #Mod+D {spawn "discord" "--enable-features=UseOzonePlatform" "--ozone-platform=wayland";}
+    //Mod+D {spawn "discord" "--enable-features=UseOzonePlatform" "--ozone-platform=wayland";}
     Mod+E {spawn "kitty" "-e" "yazi";}
     Mod+Shift+E {spawn "thunar";}
     Mod+B {spawn "~/.config/waybar/launch.sh"; }
@@ -247,15 +249,15 @@ binds {
 
     Mod+K { switch-layout "next"; }
 
-    Mod+Shift+S { screenshot-screen; }
-    Alt+Print { screenshot; }
+    Mod+Shift+S { screenshot; }
+    Alt+Print { screenshot-screen; }
     Ctrl+Print { screenshot-window; }
 
     Mod+Shift+L { quit; }
     Ctrl+Alt+Delete { spawn "rofi" "-show" "menu" "-modi" "'menu:~/.local/share/rofi/scripts/rofi-power-menu-niri --choices=logout/suspend/reboot/shutdown'" "-config" "~/.config/rofi/power.rasi"; }
 
     Super+L { spawn "hyprlock"; }
-    #Mod+Shift+P { power-off-monitors; }
+    //Mod+Shift+P { power-off-monitors; }
     
     Mod+Shift+C { center-window; }
 }

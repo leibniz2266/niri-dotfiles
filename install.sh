@@ -32,6 +32,7 @@ NECESSARY_PKGS=(
     kitty yazi thunar ttf-cascadia-code-nerd nano
     brightnessctl fastfetch rofi wget mpv swayidle
     fish tela-circle-icon-theme-dracula swaybg firefox
+    waypaper catppuccin-gtk-theme-mocha
 )
 
 yay -S --noconfirm --needed "${NECESSARY_PKGS[@]}"
@@ -103,6 +104,11 @@ cd ~/.config
 mkdir -p niri dunst kitty waybar fastfetch yazi fuzzel mpv hypr rofi
 
 
+# Sets the timezone to Los Angeles time (West Coast, baby!)
+# Change this to whatever is relevant to you. Removing this defaults to UTC
+sudo timedatectl set-timezone America/Los_Angeles
+
+
 
 # Only thing left is to copy the actual dots 
 # from the repo clone to ~/.config
@@ -126,5 +132,6 @@ mv ./rofi/local ~/.local/share/rofi
 
 echo "Moving wallpapers to ~/Pictures/Wallpapers..."
 mv ./wallpapers ~/Pictures/Wallpapers
+waypaper --set ~/Pictures/Wallpapers/"Grey Spaceman.png"
 
 echo "Done!"

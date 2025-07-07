@@ -4,6 +4,8 @@
 ########
 #         Currently a WIP. Trying to make the install
 #         process idempotent. Next is a Modular variant
+#
+#         For now, assume this thing doesn't work (bc it doesn't)
 ########
 
 

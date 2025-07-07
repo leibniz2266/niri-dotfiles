@@ -18,8 +18,8 @@ pandoc "${inputfile}" -o "${outputfile}" --from markdown --template=eisvogel.tex
 
 
 #   ::: def/theorem/idea/whatever
-#   Content however I want to do it in markdown
-#   More content, it also accepts latex within the markdown
+#   Content however you want to do it in markdown
+#   More content, it also accepts $\LaTeX$ within the markdown
 #   even more content.
 #   Images work as well!
 #   :::
