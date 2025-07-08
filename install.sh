@@ -47,6 +47,7 @@ OPTIONAL_PKGS=(
     discord obsidian xournalpp
     better-control-git cliphist
     visual-studio-code-bin
+    filen-desktop-bin
 )
 
 yay -S --noconfirm --needed "${OPTIONAL_PKGS[@]}"
