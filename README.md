@@ -93,6 +93,12 @@ chmod +x install.sh
 ./install.sh
 ```
 
+5. Set wallpaper:
+```console
+waypaper --set ~/Pictures/Wallpapers/"Grey Spaceman.png"
+```
+
+
 ---
 
 ## Manual Install
@@ -124,6 +130,11 @@ mv ./rofi/local ~/.local/share/rofi
 3. Move `wallpapers` to `~/Pictures/Wallpapers`:
 ```console
 mv ./wallpapers ~/Pictures/Wallpapers
+```
+
+4. Select base wallpaper after logging into Niri for the first time:
+```console
+waypaper --set ~/Pictures/Wallpapers/"Grey Spaceman.png"
 ```
 
 ---

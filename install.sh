@@ -110,8 +110,10 @@ mkdir -p niri dunst nvim kitty waybar fastfetch yazi fuzzel mpv hypr rofi waypap
 sudo timedatectl set-timezone America/Los_Angeles
 
 # Adding FastFetch to Fish
+fish -c "true"
+mkdir -p ~/.config/fish
+touch ~/.config/fish/config.fish
 echo "fastfetch" >> ~/.config/fish/config.fish
-
 
 # Only thing left is to copy the actual dots 
 # from the repo clone to ~/.config
@@ -141,6 +143,9 @@ mv ./gtkSettings/settings.ini ~/.config/gtk-4.0/settings.ini
 
 echo "Moving wallpapers to ~/Pictures/Wallpapers..."
 mv ./wallpapers ~/Pictures/Wallpapers
-waypaper --set ~/Pictures/Wallpapers/"Grey Spaceman.png"
+
+# Turns out you need to be logged into wayland for waypaper to work
+# Will have to run this after logging in for the first time.
+#waypaper --set ~/Pictures/Wallpapers/"Grey Spaceman.png"
 
 echo "Done!"

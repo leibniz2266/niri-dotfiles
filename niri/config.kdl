@@ -34,7 +34,7 @@ cursor {
 input {
     keyboard {
         xkb {
-            layout "gb,us"
+            layout "us"
             options "ctrl:nocaps"
         }
 
