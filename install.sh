@@ -105,15 +105,17 @@ cd ~/.config
 mkdir -p niri dunst nvim kitty waybar fastfetch yazi fuzzel mpv hypr rofi waypaper gtk-3.0 gtk-4.0
 
 
-# Sets the timezone to Los Angeles time (West Coast, baby!)
-# Change this to whatever is relevant to you. Removing this defaults to UTC
-sudo timedatectl set-timezone America/Los_Angeles
-
 # Adding FastFetch to Fish
 fish -c "true"
 mkdir -p ~/.config/fish
 touch ~/.config/fish/config.fish
 echo "fastfetch" >> ~/.config/fish/config.fish
+chsh -s $(which fish)
+
+# Sets the timezone to Los Angeles time (West Coast, baby!)
+# Change this to whatever is relevant to you. Removing this defaults to UTC
+sudo timedatectl set-timezone America/Los_Angeles
+
 
 # Only thing left is to copy the actual dots 
 # from the repo clone to ~/.config

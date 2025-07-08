@@ -6,7 +6,7 @@ spawn-at-startup "gsettings" "set" "org.gnome.desktop.wm.preferences" "theme" "'
 spawn-at-startup "waybar"
 spawn-at-startup "waypaper" "--restore"
 spawn-at-startup "dunst"
-sparn-at-startup "nm-applet"
+spawn-at-startup "nm-applet"
 spawn-at-startup "swayidle" "-w"
 
 
