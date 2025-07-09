@@ -143,6 +143,7 @@ window-rule {
     match app-id=r#"chromium$"#
     match app-id=r#"librewolf$"#
     match app-id=r#"virt-manager$"#
+    match app-id=r#"xournalpp$"#
     match app-id=r#"^com\.obsproject\.Studio$"#
 
     opacity 1.0

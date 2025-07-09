@@ -33,12 +33,10 @@ NECESSARY_PKGS=(
     brightnessctl fastfetch rofi-wayland wget mpv swayidle
     fish tela-circle-icon-theme-dracula swaybg firefox
     waypaper catppuccin-gtk-theme-mocha network-manager-applet
-    bluez bluez-utils blueman
+    bluez bluez-utils blueman catppuccin-sddm-theme-mocha
 )
 
 yay -S --noconfirm --needed "${NECESSARY_PKGS[@]}"
-sudo systemctl enable sddm
-sudo systemctl enable bluetooth
 
 # Please, feel free to edit these to your liking
 # Of course, they're tailored to what I want on my system
@@ -97,6 +95,9 @@ cp ./pandoc2.sh ~/pandoc2.sh
 ####################################
 ####################################
 
+echo "Setting up services..."
+sudo systemctl enable sddm
+sudo systemctl enable bluetooth
 
 # Make the classic /home directory folders
 cd
@@ -143,6 +144,7 @@ mv ./rofi/local ~/.local/share/rofi
 echo "Setting up GTK settings..."
 cp ./gtkSettings/settings.ini ~/.config/gtk-3.0/settings.ini
 mv ./gtkSettings/settings.ini ~/.config/gtk-4.0/settings.ini
+sudo mv ./sddm/sddm.conf /etc/sddm.conf
 
 echo "Moving wallpapers to ~/Pictures/Wallpapers..."
 mv ./wallpapers ~/Pictures/Wallpapers
