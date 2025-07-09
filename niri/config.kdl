@@ -7,6 +7,7 @@ spawn-at-startup "waybar"
 spawn-at-startup "waypaper" "--restore"
 spawn-at-startup "dunst"
 spawn-at-startup "nm-applet"
+spawn-at-startup "blueman-applet"
 spawn-at-startup "swayidle" "-w"
 
 
@@ -158,7 +159,8 @@ binds {
 
     Mod+Return { spawn "kitty"; }
     Mod+T { spawn "kitty"; }
-    Mod+A { spawn "rofi" "-show" "drun" "-config" "~/.config/rofi/sway.rasi"; }
+    Mod+A { spawn "fuzzel";}
+    //Mod+Shift+A { spawn "rofi" "-show" "drun" "-config" "~/.config/rofi/sway.rasi"; }
     Mod+W {spawn "librewolf";}
     Mod+Shift+W {spawn "librewolf" "--private-window";}
     //Mod+D {spawn "discord" "--enable-features=UseOzonePlatform" "--ozone-platform=wayland";}

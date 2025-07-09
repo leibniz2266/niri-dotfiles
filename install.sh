@@ -30,13 +30,15 @@ sudo pacman -S --noconfirm yay
 NECESSARY_PKGS=(
     sddm niri waybar kitty fuzzel dunst hyprlock 
     kitty yazi thunar ttf-cascadia-code-nerd nano
-    brightnessctl fastfetch rofi wget mpv swayidle
+    brightnessctl fastfetch rofi-wayland wget mpv swayidle
     fish tela-circle-icon-theme-dracula swaybg firefox
     waypaper catppuccin-gtk-theme-mocha network-manager-applet
+    bluez bluez-utils blueman
 )
 
 yay -S --noconfirm --needed "${NECESSARY_PKGS[@]}"
 sudo systemctl enable sddm
+sudo systemctl enable bluetooth
 
 # Please, feel free to edit these to your liking
 # Of course, they're tailored to what I want on my system
@@ -104,16 +106,14 @@ mkdir -p Desktop Documents Downloads Music Pictures Videos
 cd ~/.config
 mkdir -p niri dunst nvim kitty waybar fastfetch yazi fuzzel mpv hypr rofi waypaper gtk-3.0 gtk-4.0
 
-
-# Adding FastFetch to Fish
+# Initialize Fish and set it as the default shell
 fish -c "true"
-mkdir -p ~/.config/fish
-touch ~/.config/fish/config.fish
-echo "fastfetch" >> ~/.config/fish/config.fish
 chsh -s $(which fish)
 
 # Sets the timezone to Los Angeles time (West Coast, baby!)
 # Change this to whatever is relevant to you. Removing this defaults to UTC
+
+### If running from Arch ISO Chroot, you'll have to repeat this command yourself
 sudo timedatectl set-timezone America/Los_Angeles
 
 
@@ -127,6 +127,7 @@ mv ./niri ~/.config/
 mv ./dunst ~/.config/
 mv ./nvim ~/.config/
 mv ./kitty ~/.config/
+mv ./fish/config.fish ./config/fish/config.fish
 mv ./waybar ~/.config/
 mv ./fastfetch ~/.config/
 mv ./yazi ~/.config/
