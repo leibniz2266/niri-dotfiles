@@ -1,6 +1,7 @@
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 spawn-at-startup "/usr/lib/xdg-desktop-portal-kde"
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "export" "DISPLAY=:0"  // Absolutely necessary for like discord to work. Couldn't get it to work otherwise.
 spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "gtk-theme" "'catppuccin-mocha-lavender-standard+default'"
 spawn-at-startup "gsettings" "set" "org.gnome.desktop.wm.preferences" "theme" "'catppuccin-mocha-lavender-standard+default'"
 spawn-at-startup "waybar"

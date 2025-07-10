@@ -34,6 +34,7 @@ NECESSARY_PKGS=(
     fish tela-circle-icon-theme-dracula swaybg firefox
     waypaper catppuccin-gtk-theme-mocha network-manager-applet
     bluez bluez-utils blueman catppuccin-sddm-theme-mocha
+    xorg-xwayland xwayland-satellite
 )
 
 yay -S --noconfirm --needed "${NECESSARY_PKGS[@]}"
@@ -48,6 +49,7 @@ OPTIONAL_PKGS=(
     better-control-git cliphist
     visual-studio-code-bin
     filen-desktop-bin
+    mesa glu vulkan-intel
 )
 
 yay -S --noconfirm --needed "${OPTIONAL_PKGS[@]}"
