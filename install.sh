@@ -48,7 +48,7 @@ OPTIONAL_PKGS=(
     discord obsidian xournalpp
     better-control-git cliphist
     visual-studio-code-bin
-    filen-desktop-bin
+    filen-desktop-bin mousepad
     mesa glu vulkan-intel
 )
 
@@ -130,7 +130,7 @@ mv ./niri ~/.config/
 mv ./dunst ~/.config/
 mv ./nvim ~/.config/
 mv ./kitty ~/.config/
-mv ./fish/config.fish ./config/fish/config.fish
+mv ./fish/config.fish ~/.config/fish/config.fish
 mv ./waybar ~/.config/
 mv ./fastfetch ~/.config/
 mv ./yazi ~/.config/
@@ -139,6 +139,10 @@ mv ./mpv ~/.config/
 mv ./hypr ~/.config/
 mv ./waypaper ~/.config/
 mv ./rofi/config ~/.config/rofi
+
+echo "Setting up custom launchers..."
+sudo mv ./localApplications/niri.desktop /usr/share/wayland-sessions/niri.desktop
+mv ./localApplications/ ~/.local/share/applications
 
 echo "Putting rofi script in ~/.local/share/rofi..."
 mv ./rofi/local ~/.local/share/rofi
