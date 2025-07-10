@@ -141,7 +141,6 @@ mv ./waypaper ~/.config/
 mv ./rofi/config ~/.config/rofi
 
 echo "Setting up custom launchers..."
-sudo mv ./localApplications/niri.desktop /usr/share/wayland-sessions/niri.desktop
 mv ./localApplications/ ~/.local/share/applications
 
 echo "Putting rofi script in ~/.local/share/rofi..."
@@ -154,9 +153,5 @@ sudo mv ./sddm/sddm.conf /etc/sddm.conf
 
 echo "Moving wallpapers to ~/Pictures/Wallpapers..."
 mv ./wallpapers ~/Pictures/Wallpapers
-
-# Turns out you need to be logged into wayland for waypaper to work
-# Will have to run this after logging in for the first time.
-#waypaper --set ~/Pictures/Wallpapers/"Grey Spaceman.png"
 
 echo "Done!"
