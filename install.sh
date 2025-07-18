@@ -28,13 +28,13 @@ sudo pacman -S --noconfirm yay
 
 
 NECESSARY_PKGS=(
-    sddm niri waybar kitty fuzzel dunst hyprlock 
+    sddm niri-git waybar kitty fuzzel dunst hyprlock 
     kitty yazi thunar ttf-cascadia-code-nerd nano
     brightnessctl fastfetch rofi-wayland wget mpv swayidle
     fish tela-circle-icon-theme-dracula swaybg firefox
     waypaper catppuccin-gtk-theme-mocha network-manager-applet
     bluez bluez-utils blueman catppuccin-sddm-theme-mocha
-    xorg-xwayland xwayland-satellite
+    xorg-xwayland xwayland-satellite-git qt6-wayland
 )
 
 yay -S --noconfirm --needed "${NECESSARY_PKGS[@]}"
@@ -139,6 +139,7 @@ mv ./mpv ~/.config/
 mv ./hypr ~/.config/
 mv ./waypaper ~/.config/
 mv ./rofi/config ~/.config/rofi
+mv ./environment.d ~/.config/
 
 echo "Setting up custom launchers..."
 mv ./localApplications/ ~/.local/share/applications
