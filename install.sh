@@ -48,8 +48,9 @@ OPTIONAL_PKGS=(
     discord obsidian xournalpp
     better-control-git cliphist
     visual-studio-code-bin
-    filen-desktop-bin mousepad
-    mesa glu vulkan-intel
+    filen-desktop-bin mousepad vlc
+    mesa glu dnsmasq networkmanager-{openvpn,pptp}
+    systemd-resolvconf wireguard-tools
 )
 
 yay -S --noconfirm --needed "${OPTIONAL_PKGS[@]}"
@@ -107,7 +108,7 @@ mkdir -p Desktop Documents Downloads Music Pictures Videos
 
 # Pre-make some of these folders, for convenience. The script will exit if they're not there
 cd ~/.config
-mkdir -p niri dunst nvim kitty waybar fastfetch yazi fuzzel mpv hypr rofi waypaper gtk-3.0 gtk-4.0
+mkdir -p niri dunst nvim foot kitty waybar fastfetch yazi fuzzel mpv hypr rofi waypaper gtk-3.0 gtk-4.0
 
 # Initialize Fish and set it as the default shell
 fish -c "true"
@@ -130,6 +131,7 @@ mv ./niri ~/.config/
 mv ./dunst ~/.config/
 mv ./nvim ~/.config/
 mv ./kitty ~/.config/
+mv ./foot ~/.config/
 mv ./fish/config.fish ~/.config/fish/config.fish
 mv ./waybar ~/.config/
 mv ./fastfetch ~/.config/
