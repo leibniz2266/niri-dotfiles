@@ -36,7 +36,8 @@ input {
     keyboard {
         xkb {
             layout "us"
-            options "ctrl:nocaps"
+            //options "ctrl:nocaps"
+            // No idea why this option was on. Disables caps lock for some reason
         }
 
         repeat-delay 400
