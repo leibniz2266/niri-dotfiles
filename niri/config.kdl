@@ -80,7 +80,7 @@ layout {
         proportion 0.25
         proportion 0.5
         proportion 0.75
-        proportion 0.99
+        proportion 1.0
     }
 
     preset-window-heights {
@@ -147,6 +147,12 @@ window-rule {
     match app-id=r#"xournalpp$"#
 
     opacity 1.0
+}
+
+window-rule {
+    match app-id=r#"filen$"#
+    max-width 876
+    // Makes Filen window's exit button clickable on smaller screens
 }
 
 binds {
